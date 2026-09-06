@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug-demo
+spec:
+  containers:
+  - name: broken-app
+    image: busybox
+    command: ["nonexistent-command"]

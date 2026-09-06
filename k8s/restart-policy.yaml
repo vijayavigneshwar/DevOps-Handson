@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: restart-onfailure-demo
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: quick-exit
+    image: busybox
+    command: ["sh", "-c", "echo 'Running once and exiting'; exit 1"]
